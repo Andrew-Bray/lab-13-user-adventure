@@ -13,39 +13,41 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
-    </header>
+
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <content>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-
+        <h1>This is the first page of the adventure</h1>
+        <p>(This might be a page that we arrive at after a brief mysterious intro)</p>
+        <section id="name-section">
+            <p>You find yourself in the living room of a drafty house. You look up to see giant furniture, hard wood floors, and not a lot of places to hide. You don’t remember how you got here, but you do remember your name.</p>
+            <span>You remember your fellow fuzzy friends calling you</span>
+            <form id="name-form">
+                <label>
+                    <input name="name" />
+                <button>Explore!</button>
+                </label>
+            </form>
+        </section>
+        <section id="species-section">
+            <p>Ahhh, yes! Of course! You've always responded to <span id="your-name"></span>. You skitter over to a mirror, and decide to build up some courage. With your many eyes you look back at yourself.   What do you see?</p>
+            
+            <form id="species-form">
+                <select name="species">
+                    <option value="cardinal">A dapper Red visage</option>
+                    <option value="bold-jumper">A rich Black fuzzy coat with white splotches</option>
+                    <option value="regal">A Warm tan fuzzy image of Adorableness</option>
+                    <option value="zebra">Striped Perfection</option>
+                    <option value="high-eyelashed">Some Dashing spiky hair!</option>
+                </select>
+                <button>Be Bold!</button>
+            </form>
+        </section>
+        <section id="explore-section">
+            <p>That’s right <span id=your-name></span>, you are a <span id="your-species"></span>, capable of jumping and creeping up on your tasty prey with charming, fuzzy ease. But now, you are out of your element. And you are Hungry! Its time to do some exploring! .</p>
+            <a href="./main-room"><button id=room-button>Let's Explore!</button></a>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        
     </footer>
 
     <script type="module" src="app.js"></script>
