@@ -6,22 +6,41 @@
 
 .main-room-bg {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    min-width: 80%;
+    top: 70px;
+    left: 70px;
+    min-width: 80vw;
     z-index: -2;
     opacity: .7;
 
 }
 .bg-layer {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    min-width: 80%;
+    top: 70px;
+    left: 70px;
+    min-width: 80vw;
     z-index: -3;
     opacity: .9;
 }
 
 button {
     font-family: 'monthoers';
+}
+
+#map-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.map-size {
+    width: 80vw;
+    height: calc(80vw * 650/900)
+}
+
+.adventure {
+    font-family:'monthoers';
+    font-size: 1.5rem;
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+
 }
