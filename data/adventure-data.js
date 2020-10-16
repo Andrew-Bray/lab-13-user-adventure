@@ -5,7 +5,9 @@ const creepyCorner = {
         top: '18%',
         left: '35%'
     },
-    image: 'monsters.jpg',
+    image: '',
+    audio: '',
+    action: '',
     description: ` Ooooooooh! There seems to be flies and other yummies hangin out in this corner. Jackpot!`,
     choices: [{
         id: 'food',
@@ -41,9 +43,9 @@ const secretSofa = {
         top: '92%',
         left: '60%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: '',
+    audio: '',
+    action: '',
     description: `
         You skitter your little fuzzy body into the shadows underneath the sofa. Tiny shadows, and the "click click!" of little legs. You know that sound... Cockroaches!! Your favorite!
     `,
@@ -81,9 +83,9 @@ const tinyTable = {
         top: '80%',
         left: '30%'
     },
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: '',
+    audio: '',
+    action: '',
     description: `
         You crawl up a leg of a charming table. As you crest the top you notice-- a soothing bowl of lemons.  Oooh! And above that, a cloud of fruit flies, your favorite apertif.
     `,
