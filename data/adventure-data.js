@@ -2,10 +2,12 @@ const creepyCorner = {
     id: 'corner',
     title: 'This Creepy Corner',
     map: {
-        top: '89%',
-        left: '44%'
+        top: '18%',
+        left: '35%'
     },
-    image: 'monsters.jpg',
+    image: '',
+    audio: '',
+    action: '',
     description: ` Ooooooooh! There seems to be flies and other yummies hangin out in this corner. Jackpot!`,
     choices: [{
         id: 'food',
@@ -16,126 +18,102 @@ const creepyCorner = {
         health: 5,
         food: 30
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'injury',
+        description: 'Stalk slowly forward the smogasborg.',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 food.
+            another spider hops out and is pissed off, she tackles you, and you feel the prick prick of her fangs! Ouch!
         `,
         health: -30,
-        food: 50
+        food: 0
     }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
+        id: 'no-food',
+        description: 'Hmmmmm... this seems fishy...',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 health damage.
+            Your Spider-sense tingles, and you quickly leave the buffet, as a mean looking spider rears her head. "Miiiiiiiine!!" She yells, as your legs take you away, your belly rumbling.
         `,
-        health: -50,
+        health: 0,
         food: 0
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A Problem Dragon',
+const secretSofa = {
+    id: 'sofa',
+    title: 'Under the Sofa',
     map: {
-        top: '17%',
-        left: '37%'
+        top: '92%',
+        left: '60%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: '',
+    audio: '',
+    action: '',
     description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You skitter your little fuzzy body into the shadows underneath the sofa. Tiny shadows, and the "click click!" of little legs. You know that sound... Cockroaches!! Your favorite!
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'no-food',
+        description: 'sSowly stalk your prey.',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 food.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 health damage. 
+            As you creep behind the dust bunnies, ou notice a Giant Kitty cat! You Skeddale before a giant claw swipes in front of you. Due to your measured approach, you are ready to use your madskillz to jump out of the way. 
         `,
-        health: -35,
-        food: 35
+        health: 0,
+        food: 0
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'injury',
+        description: 'Viciously attack your prey!',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 health damage.
+            In the middle of a Matrix-worthy pounce, you are side-swiped by-- a giant kitty kat! Ouch!! Ooh, you should have been more careful. Now you're oozing spider blood, and you're even hungrier.
         `,
         health: -45,
-        food: 0
+        food: -5
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'food',
+        description: 'Spider sense is tingling...',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 food.
+        Something doesn’t feel right, you twitch into a corner as a GIANT cat stalks past you. Once it heads away from you, you take the moment to remove the world of another cockroach.
         `,
         health: 0,
-        food: 90
+        food: 30
     }]
 };
 
-const treasure = {
-    id: 'treasure',
-    title: 'some -image.png',
+const tinyTable = {
+    id: 'table',
+    title: 'An inviting table',
     map: {
-        top: '31%',
-        left: '5%'
+        top: '80%',
+        left: '30%'
     },
-    prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: '',
+    audio: '',
+    action: '',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        You crawl up a leg of a charming table. As you crest the top you notice-- a soothing bowl of lemons.  Oooh! And above that, a cloud of fruit flies, your favorite apertif.
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 food pieces!',
-        health: 0,
-        food: 40
+        id: 'food',
+        description: 'Let\'s stalk slowly onto a lemon',
+        result: 'Slowly stalking, you twitch your way onto a fragrant lemon, and hop your way from fruit to fruit, catching a flurry of fruit flies with each jump',
+        health: 5,
+        food: 25
     }, {
-        id: 'fooden',
-        description: 'A fooden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 health damage',
-        health: -50,
+        id: 'no-food',
+        description: 'Plunge into the cloud!',
+        result: 'Oooh, it turns out fruit flies are more nimble than first expected, you bold strategy is rewarded with zero captures, and your salivating fangs are left unfulfilled.',
+        health: 0,
         food: 0
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 health',
-        health: 35,
+        id: 'injury',
+        description: 'Go around the table for a better view',
+        result: 'You hear a high-pitched banshee wail, and as you turn around, you see a giant human, who flings their iPhone at you. F U, Steve Jobs!',
+        health: -40,
         food: 0
     }]
 };
 
-const quests = [
-    monsters, 
-    treasure,
-    dragon
+const adventures = [
+    secretSofa, 
+    creepyCorner,
+    tinyTable
 ];
 
-export default quests;
+export default adventures;
